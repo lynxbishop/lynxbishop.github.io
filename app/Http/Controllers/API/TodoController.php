@@ -40,7 +40,7 @@ class TodoController extends Controller
     {
         return $this->todoInterface->requestUser($request);
     }
-     */
+
 
     /**
      * Display the specified resource.
@@ -52,7 +52,7 @@ class TodoController extends Controller
     {
         return $this->todoInterface->getById($id);
     }
-     */
+
 
     /**
      * Update the specified resource in storage.
@@ -65,7 +65,7 @@ class TodoController extends Controller
     {
         return $this->todoInterface->requestUser($request, $id);
     }
-     */
+
 
     /**
      * Remove the specified resource from storage.
@@ -77,5 +77,5 @@ class TodoController extends Controller
     {
         return $this->todoInterface->deleteUser($id);
     }
-    */
+
 }
