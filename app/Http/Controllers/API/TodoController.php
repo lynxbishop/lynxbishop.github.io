@@ -34,24 +34,26 @@ class TodoController extends Controller
      *
      * @param  \App\Http\Requests\UserRequest  $request
      * @return \Illuminate\Http\Response
-
+     */
+    
     public function store(UserRequest $request)
     {
         return $this->todoInterface->requestUser($request);
     }
-     */
+     
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
+    
     public function show($id)
     {
         return $this->todoInterface->getById($id);
     }
-     */
+     
 
     /**
      * Update the specified resource in storage.
@@ -59,22 +61,23 @@ class TodoController extends Controller
      * @param  \App\Http\Requests\UserRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
+    
     public function update(UserRequest $request, $id)
     {
         return $this->todoInterface->requestUser($request, $id);
     }
-     */
+    
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
     public function destroy($id)
     {
         return $this->todoInterface->deleteUser($id);
     }
-    */
+    
 }
