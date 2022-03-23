@@ -34,6 +34,7 @@ class TodoController extends Controller
      *
      * @param  \App\Http\Requests\UserRequest  $request
      * @return \Illuminate\Http\Response
+     */
 
     public function store(UserRequest $request)
     {
@@ -46,7 +47,7 @@ class TodoController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
     public function show($id)
     {
         return $this->todoInterface->getById($id);
@@ -59,7 +60,7 @@ class TodoController extends Controller
      * @param  \App\Http\Requests\UserRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
     public function update(UserRequest $request, $id)
     {
         return $this->todoInterface->requestUser($request, $id);
@@ -71,7 +72,7 @@ class TodoController extends Controller
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
-
+     */
     public function destroy($id)
     {
         return $this->todoInterface->deleteUser($id);
