@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    @yield('style')
 </head>
 <body>
 <div id="app">
@@ -53,7 +54,20 @@
                                 <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Dropee
+                            </a>
 
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('dropee.frontend') }}">
+                                    User View
+                                </a>
+                                <a class="dropdown-item" href="{{ route('dropee.manage') }}">
+                                    Manage View
+                                </a>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 List of Top Completed
@@ -71,9 +85,9 @@
                                 </a>
                             </div>
                         </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('api') }}">API</a>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('api') }}">API</a>
+                        </li>
 
                     @else
 
