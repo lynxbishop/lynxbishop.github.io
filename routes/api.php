@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-Route::get('/todo',[\App\HTTP\Controllers\API\TodoController::class,'index']);
+Route::get('/todo',[\App\Http\Controllers\API\TodoController::class,'index']);
 //Route::resource('todo', 'App\HTTP\Controllers\API\TodoController');
