@@ -55,7 +55,7 @@ class TodoController extends Controller
             $this->seedUser();
             $this->seedTodo();
         }
-        return redirect()->route('first');
+        return redirect()->route('dropee.frontend');
     }
 
     public function index1(){
